@@ -16,12 +16,12 @@ public class DataLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
         // Очищаем существующие данные (опционально)
         taskRepository.deleteAll();
-        
+
         // Добавляем тестовые задачи
         taskRepository.save(new Task("Задача 1", "Описание к задаче"));
         taskRepository.save(new Task("Задача 2", "Описание к задаче"));
         taskRepository.save(new Task("Задача 3", "Соотствественно, описание к задаче"));
-        
+
         System.out.println("Тестовые данные добавлены в базу!");
     }
 }
